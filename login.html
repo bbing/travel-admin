@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<title>登录-BETALABS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="max-age=0" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="Description" content="BETALABS" />
+	<meta name="Keywords" content="BETALABS" />
+	<!--[if lte IE 6]>
+	<script>window.location.href='notsupported/';</script>
+	<![endif]-->
+	<link href="static/css/plug.base.css" rel="stylesheet" />
+	<!-- basic styles -->
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="static/css/plug.awesome.ie7.css" />
+	<![endif]-->
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="static/css/plug.ace.ie.css" />
+	<![endif]-->
+	<script src="static/js/plug.aceextra.js"></script>
+	<!--[if lt IE 9]>
+	<script src="static/js/plug.html5.js"></script>
+	<script src="static/js/plug.respond.js"></script>
+	<![endif]-->
+	<!-- 以上部分不可修改 -->
+	<link rel="stylesheet" href="static/css/mod.login.css" />
+</head>
+
+<body class="login">
+	<div class="logo">
+		<img src="static/img/logo_large.png" alt="" />
+	</div>
+	<div class="content">
+		<form class="login-form" id="wform" action="login" method="post">
+			<h3 class="form-title"> <i class="icon-coffee"></i>
+				请输入您的信息
+			</h3>
+			<div class="alert alert-warning hide" id="J_error">
+				<button type="button" class="close" data-dismiss="alert"> <i class="icon-remove"></i>
+				</button>
+				<span></span>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<div class="input-icon input-icon-right">
+						<input class="m-wrap placeholder-no-fix" type="text" placeholder="用户名" name="username" id="username" required="true" />
+						<i class="icon-user"></i>
+					</div>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<div class="input-icon input-icon-right">
+						<input class="m-wrap placeholder-no-fix" type="password" placeholder="密码" name="password" id="password" required="true" />
+						<i class="icon-lock"></i>
+					</div>
+				</div>
+			</div>
+			<div class="form-inline control-group">
+				<span class="input-icon input-icon-right">
+					<input class="placeholder-no-fix authcode" type="text" placeholder="验证码" name="authcode" id="authcode" required="true" />
+					<i class="icon-picture"></i>
+				</span>
+				<img src="static/img/image13.jpg" class="authimg">
+				<a href="javascript:;" class="refreshimg">换一张</a>
+			</div>
+			<div class="form-submit">
+				<button type="submit" id="loginSubmit" class="btn btn-sm">
+					<i class="icon-key bigger-110"></i>
+					登入
+				</button>
+			</div>
+		</form>
+	</div>
+	<div class="copyright">
+		&copy;
+		<a href="#">BETALABS</a>
+	</div>
+	<!-- # FOOTER # -->
+	<!-- 不支持ie6及以下的判断 -->
+	<!--[if lte IE 6]>
+	<script>window.location.href='/notsupported/';</script>
+	<![endif]-->
+</body>
+	<script src="static/js/jquery.js"></script>
+	<script src="static/js/plug.base.js"></script>
+	<script type="text/javascript">
+		//登录
+		$("#loginSubmit").on("click", function(){ 
+			var username = $("#username").val(),password = $("#password").val(),authcode = $("#authcode").val();
+			if (!username) {
+				$("#J_error span").text("请输入用户名");
+				$("#J_error").removeClass("hide");
+				$("#username").focus();
+				return false;
+			}
+			if (!password) {
+				$("#J_error span").text("请输入密码");
+				$("#J_error").removeClass("hide");
+				$("#password").focus();
+				return false;
+			}
+			if (!authcode) {
+				$("#J_error span").text("请输入验证码");
+				$("#J_error").removeClass("hide");
+				$("#authcode").focus();
+				return false;
+			}
+			$.post("...", {username:username,password:password,authcode:authcode}, function(data){
+				//status为0则成功 否则显示错误信息
+				if (data['status']==0) {
+
+				} else {
+					$("#J_error span").text("用户名或密码错误");
+					$("#J_error").removeClass("hide");
+				}
+			})
+			return false;
+		})
+	</script>
+</html>
