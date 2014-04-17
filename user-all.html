@@ -1,0 +1,783 @@
+<!doctype html>
+<html>
+<head>
+	<title>全部用户-BETALABS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="max-age=0" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="Description" content="BETALABS" />
+	<meta name="Keywords" content="BETALABS" />
+	<!--[if lte IE 6]>
+	<script>window.location.href='notsupported/';</script>
+	<![endif]-->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+	<![endif]-->
+	<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+	<link rel="stylesheet" href="assets/css/ace.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+	<![endif]-->
+
+	<script src="assets/js/ace-extra.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	<!-- 以上部分不可修改 -->
+	<link rel="stylesheet" href="assets/css/mod.base.css" />
+
+	<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+</head>
+
+<body>
+	<div class="navbar navbar-default" id="navbar">
+		<div class="navbar-container" id="navbar-container">
+			<div class="navbar-header pull-left">
+				<a href="./" class="">
+					<small>
+						<img src="assets/img/logo_small.png" alt="" />
+					</small>
+				</a>
+				<!-- /.brand -->
+			</div>
+			<!-- /.navbar-header -->
+
+			<div class="navbar-header pull-right" role="navigation">
+				<ul class="nav ace-nav">
+					<li >
+						<a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+							<span class="user-info">周晓通</span> <i class="icon-caret-down"></i>
+						</a>
+
+						<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li>
+								<a href="#"> <i class="icon-lock"></i>
+									修改密码
+								</a>
+							</li>
+
+							<li class="divider"></li>
+
+							<li>
+								<a href="#">
+									<i class="icon-off"></i>
+									退出
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- /.ace-nav -->
+			</div>
+			<!-- /.navbar-header -->
+		</div>
+		<!-- /.container -->
+	</div>
+
+	<div class="main-container" id="main-container">
+		<div class="main-container-inner">
+			<a class="menu-toggler" id="menu-toggler" href="#">
+				<span class="menu-text"></span>
+			</a>
+			<div class="sidebar" id="sidebar">
+				<ul class="nav nav-list">
+					<li>
+						<a href="index.html">
+							<i class="icon-dashboard"></i>
+							<span class="menu-text">欢迎页</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-book"></i>
+							<span class="menu-text">玩法</span> <b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li >
+								<a href="play.html">
+									<i class="icon-double-angle-right"></i>
+									全部玩法
+								</a>
+							</li>
+							<li>
+								<a href="car.html">
+									<i class="icon-double-angle-right"></i>
+									租车服务
+								</a>
+							</li>
+							<li>
+								<a href="stay.html">
+									<i class="icon-double-angle-right"></i>
+									客栈住宿
+								</a>
+							</li>
+							<li>
+								<a href="lock.html">
+									<i class="icon-double-angle-right"></i>
+									被锁定
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="active">
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-user"></i>
+							<span class="menu-text">用户</span> <b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li class="active">
+								<a href="user-all.html">
+									<i class="icon-double-angle-right"></i>
+									全部用户
+								</a>
+							</li>
+							<li>
+								<a href="user-check.html">
+									<i class="icon-double-angle-right"></i>
+									待审核
+								</a>
+							</li>
+							<li>
+								<a href="user-lock.html">
+									<i class="icon-double-angle-right"></i>
+									被锁定
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-exclamation-sign"></i>
+							<span class="menu-text">意见反馈&举报</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="opinion.html">
+									<i class="icon-double-angle-right"></i>
+									意见反馈
+								</a>
+							</li>
+							<li>
+								<a href="report.html">
+									<i class="icon-double-angle-right"></i>
+									举报
+								</a>
+							</li> 
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-home"></i>
+							<span class="menu-text">首页数据</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="topic.html">
+									<i class="icon-double-angle-right"></i>
+									专题
+								</a>
+							</li>
+							<li>
+								<a href="play-suggest.html">
+									<i class="icon-double-angle-right"></i>
+									推荐玩法
+								</a>
+							</li>
+							<li>
+								<a href="user-suggest.html">
+									<i class="icon-double-angle-right"></i>
+									推荐地主
+								</a>
+							</li>
+							<li>
+								<a href="ads.html">
+									<i class="icon-double-angle-right"></i>
+									广告
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-hdd"></i>
+							<span class="menu-text">内容</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="play-cate.html">
+									<i class="icon-double-angle-right"></i>
+									玩法分类
+								</a>
+							</li>
+							<li>
+								<a href="user-special.html">
+									<i class="icon-double-angle-right"></i>
+									地主特长
+								</a>
+							</li>
+							<li>
+								<a href="user-cate.html">
+									<i class="icon-double-angle-right"></i>
+									地主分类
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-cog"></i>
+							<span class="menu-text">系统设置</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="account.html">
+									<i class="icon-double-angle-right"></i>
+									帐号管理
+								</a>
+							</li>
+							<li>
+								<a href="log.html">
+									<i class="icon-double-angle-right"></i>
+									查看日志
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- /.nav-list -->
+
+				<div class="sidebar-collapse" id="sidebar-collapse">
+					<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+				</div>
+			</div>
+
+			<div class="main-content">
+
+				<div class="page-content">
+					<div class="page-header">
+						<h1>
+							全部用户
+							<small>
+								<i class="icon-double-angle-right"></i>
+								列表
+							</small>
+						</h1>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<!-- TIPS.BASE -->
+							<div class="table-responsive">
+								<div class="alert alert-info  no-margin">
+									<form class="inline">
+										<label class="inline">
+											<span class="lbl">搜索:</span>
+										</label>
+										<input type="text" class="input-midium" name="keyword" />
+										<select  name="city">
+											<option value="xian">西安</option>
+										</select>
+										<select  name="cate">
+											<option value="1">地主分类</option>
+											<option value="2">分类1</option>
+											<option value="3">分类2</option>
+										</select>
+										<span class="input-icon input-icon-right">
+											<input class="input-midium"  type="text" name="daterange" />
+											<i class="icon-calendar bigger-110"></i>
+										</span>
+										<button type="submit" class="btn btn-info btn-sm">确认</button>
+
+									</form>
+								</div>
+
+								<table class="table table-striped table-bordered table-hover dataTable">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>头像</th>
+											<th>名称</th>
+											<th>性别</th>
+											<th>地主分类</th>
+											<th>已认证</th>
+											<th>待审核认证项</th>
+											<th>注册时间</th>
+											<th>状态</th>
+											<th>操作</th>
+										</tr>
+									</thead>
+									<tbody >
+										<tr>
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-primary">已发布</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="orange J_lock" href="#" data-rel="tooltip" data-id="11" data-name="小天" title="锁定">
+														<i class="icon-lock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr >
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-warning">被锁定</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="dark" href="#" data-rel="tooltip" title="取消锁定">
+														<i class="icon-unlock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-primary">已发布</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="orange J_lock" href="#" data-rel="tooltip" data-id="11" data-name="小天" title="锁定">
+														<i class="icon-lock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr >
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-warning">被锁定</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="dark" href="#" data-rel="tooltip" title="取消锁定">
+														<i class="icon-unlock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-primary">已发布</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="orange J_lock" href="#" data-rel="tooltip" data-id="11" data-name="小天" title="锁定">
+														<i class="icon-lock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr >
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-warning">被锁定</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="dark" href="#" data-rel="tooltip" title="取消锁定">
+														<i class="icon-unlock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-primary">已发布</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="orange J_lock" href="#" data-rel="tooltip" data-id="11" data-name="小天" title="锁定">
+														<i class="icon-lock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr >
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-warning">被锁定</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="dark" href="#" data-rel="tooltip" title="取消锁定">
+														<i class="icon-unlock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-primary">已发布</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="orange J_lock" href="#" data-rel="tooltip" data-id="11" data-name="小天" title="锁定">
+														<i class="icon-lock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr >
+											<td>00020</td>
+											<td>
+												<img src="assets/img/user.jpg" class="img-circle"></td>
+											<td>
+												<a href="#">张晓晓</a>
+											</td>
+											<td>男</td>
+											<td>向导伴游</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >手机号</a>
+													<a  href="#"  >身份证</a>
+												</div>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a  href="#"  >学生证</a>
+												</div>
+											</td>
+											<td>2014-04-22</td>
+											<td>
+												<span class="label label-sm label-warning">被锁定</span>
+											</td>
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="dark" href="#" data-rel="tooltip" title="取消锁定">
+														<i class="icon-unlock bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="modal-footer no-margin-top">
+									<div class="dataTables_info pull-left">用户数 10/1000个</div>
+
+									<ul class="pagination  pull-right no-margin">
+										<li class="prev disabled">
+											<a href="#">
+												<i class="icon-double-angle-left"></i>
+											</a>
+										</li>
+
+										<li class="active">
+											<a href="#">1</a>
+										</li>
+
+										<li>
+											<a href="#">2</a>
+										</li>
+
+										<li>
+											<a href="#">3</a>
+										</li>
+
+										<li class="next">
+											<a href="#">
+												<i class="icon-double-angle-right"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /.page-content -->
+			</div>
+			<!-- /.main-content -->
+
+		</div>
+		<!-- /.main-container-inner -->
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="icon-double-angle-up icon-only bigger-110"></i>
+		</a>
+	</div>
+	<!-- /.main-container -->
+
+	<script src="assets/js/jquery.js"></script>
+	<script>
+	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
+<script src="assets/js/plug.base.js"></script>
+<script src="assets/js/mod.base.js"></script>
+<script src="assets/js/date-time/daterangepicker.min.js"></script>
+<script src="assets/js/date-time/moment.min.js"></script>
+<script type="text/javascript">
+	$('[data-rel=tooltip]').tooltip();
+	$('input[name=daterange]').daterangepicker().prev().on(ace.click_event, function(){
+		$(this).next().focus();
+	});
+	
+	$(function(){
+		var lock=$('.J_lock');
+		lock.on(ace.click_event, function() {
+ 
+	 		var lock_id       = $(this).attr('data-id');
+	 		var lock_username = $(this).attr('data-name');
+	 		var lockHtml = '<div class="row"><div class="col-xs-12"><h2 class="text-center ui-pb20">锁定</h2><form class="form-horizontal" role="form">'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">锁定玩家</label>'+
+						'<div class="col-sm-9">'+
+						'<input type="text" id="lock_username" readonly value="'+lock_username+'" class="col-xs-10 col-sm-5" />'+
+						'<input type="hidden" id="lock_id" value="'+lock_id+'"  />'+
+						'</div>'+
+					'</div>'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">锁定原因</label>'+
+						'<div class="col-sm-9">'+
+							'<select name="lock_reason" id="lock_reason">'+
+								'<option value="1" selected>包含不良内容</option>'+
+								'<option value="2">黑名单</option>'+
+								'<option value="3">等等</option>'+
+							'</select>'+ 
+						'</div>'+
+					'</div>'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">补充原因</label>'+
+						'<div class="col-sm-9">'+
+							'<textarea class="form-control" id="lock_des" placeholder="补充原因"></textarea>'+
+						'</div>'+
+					'</div>'+
+				'</form></div></div>';
+	 		bootbox.dialog({
+				message: lockHtml,
+				buttons: 			
+				{
+					
+					"danger" :
+					{
+						"label" : "锁定",
+						"className" : "btn-sm btn-danger",
+						"callback": function() {
+							var lock_id = $("#lock_id").val(),lock_reason = $("#lock_reason").val(),lock_des = $("#lock_des").val();
+							/**
+							锁定接口
+							status 为0时成功
+							**/
+							$.post('...',{lock_id:lock_id,lock_reason:lock_reason,lock_des:lock_des}, function(data){
+								if (data.status==0) {
+
+								} else {
+									bootbox.dialog({
+										message: "<span class='bigger-110'>锁定失败</span>",
+										buttons: 			
+										{
+											"button" :
+											{
+												"label" : "我知道了",
+												"className" : "btn-sm"
+											}
+										}
+									}); 
+								}
+							});
+						}
+					},  
+					"button" :
+					{
+						"label" : "取消",
+						"className" : "btn-sm"
+					}
+				}
+			});
+		});
+	})
+</script>
+</body>
+</html>

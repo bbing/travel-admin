@@ -13,37 +13,39 @@
 	<!--[if lte IE 6]>
 	<script>window.location.href='notsupported/';</script>
 	<![endif]-->
-	<link href="static/css/plug.base.css" rel="stylesheet" />
-	<!-- basic styles -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 	<!--[if IE 7]>
-	<link rel="stylesheet" href="static/css/plug.awesome.ie7.css" />
+	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
 	<![endif]-->
+	<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+	<link rel="stylesheet" href="assets/css/ace.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
 	<!--[if lte IE 8]>
-	<link rel="stylesheet" href="static/css/plug.ace.ie.css" />
+	<link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 	<![endif]-->
-	<script src="static/js/plug.aceextra.js"></script>
+
+	<script src="assets/js/ace-extra.min.js"></script>
 	<!--[if lt IE 9]>
-	<script src="static/js/plug.html5.js"></script>
-	<script src="static/js/plug.respond.js"></script>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 以上部分不可修改 -->
-	<link rel="stylesheet" href="static/css/mod.login.css" />
+	<link rel="stylesheet" href="assets/css/mod.login.css" />
 </head>
 
 <body class="login">
 	<div class="logo">
-		<img src="static/img/logo_large.png" alt="" />
+		<img src="assets/img/logo_large.png" alt="" />
 	</div>
 	<div class="content">
 		<form class="login-form" id="wform" action="login" method="post">
 			<h3 class="form-title"> <i class="icon-coffee"></i>
 				请输入您的信息
 			</h3>
-			<div class="alert alert-warning hide" id="J_error">
-				<button type="button" class="close" data-dismiss="alert"> <i class="icon-remove"></i>
-				</button>
-				<span></span>
-			</div>
+			<div id="J_alert"></div>
 			<div class="control-group">
 				<div class="controls">
 					<div class="input-icon input-icon-right">
@@ -65,7 +67,7 @@
 					<input class="placeholder-no-fix authcode" type="text" placeholder="验证码" name="authcode" id="authcode" required="true" />
 					<i class="icon-picture"></i>
 				</span>
-				<img src="static/img/image13.jpg" class="authimg">
+				<img src="assets/img/image13.jpg" class="authimg">
 				<a href="javascript:;" class="refreshimg">换一张</a>
 			</div>
 			<div class="form-submit">
@@ -86,27 +88,27 @@
 	<script>window.location.href='/notsupported/';</script>
 	<![endif]-->
 </body>
-	<script src="static/js/jquery.js"></script>
-	<script src="static/js/plug.base.js"></script>
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/plug.base.js"></script>
 	<script type="text/javascript">
 		//登录
 		$("#loginSubmit").on("click", function(){ 
 			var username = $("#username").val(),password = $("#password").val(),authcode = $("#authcode").val();
 			if (!username) {
-				$("#J_error span").text("请输入用户名");
-				$("#J_error").removeClass("hide");
+				var alertHtml = '<div class="alert alert-warning" id="J_error"><button type="button" class="close" data-dismiss="alert"> <i class="icon-remove"></i></button>请输入用户名</div>';
+				$("#J_alert").html(alertHtml); 
 				$("#username").focus();
 				return false;
 			}
-			if (!password) {
-				$("#J_error span").text("请输入密码");
-				$("#J_error").removeClass("hide");
+			if (!password) { 
+				var alertHtml = '<div class="alert alert-warning" id="J_error"><button type="button" class="close" data-dismiss="alert"> <i class="icon-remove"></i></button>请输入密码</div>';
+				$("#J_alert").html(alertHtml); 
 				$("#password").focus();
 				return false;
 			}
-			if (!authcode) {
-				$("#J_error span").text("请输入验证码");
-				$("#J_error").removeClass("hide");
+			if (!authcode) { 
+				var alertHtml = '<div class="alert alert-warning" id="J_error"><button type="button" class="close" data-dismiss="alert"> <i class="icon-remove"></i></button>请输入验证码</div>';
+				$("#J_alert").html(alertHtml); 
 				$("#authcode").focus();
 				return false;
 			}
@@ -115,8 +117,8 @@
 				if (data['status']==0) {
 
 				} else {
-					$("#J_error span").text("用户名或密码错误");
-					$("#J_error").removeClass("hide");
+					var alertHtml = '<div class="alert alert-warning" id="J_error"><button type="button" class="close" data-dismiss="alert"> <i class="icon-remove"></i></button>用户名或密码不对</div>';
+					$("#J_alert").html(alertHtml); 
 				}
 			})
 			return false;

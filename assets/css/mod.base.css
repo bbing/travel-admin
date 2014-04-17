@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*******************************
+ * Copyright:智讯互动(www.zhixunhudong.com)
+ * Author:Mr.Think
+ * Description:微智V2.0.1
+ *******************************/
+ .ui-p0{padding:0!important;}
+ .ui-m0{margin:0!important;}
+ .ui-hide{display: none;}
+ .ui-show{display: none;}
+ .ui-ml10{margin-left:10px;}
+ .ui-pl10{padding-left:10px;}
+ .ui-pt15{padding-top:15px!important;}
+ .ui-pb5{padding-bottom:5px!important;}
+ .ui-pb20{padding-bottom:20px!important;}
+ .ui-p10{padding:10px;}
+ .ui-gray{color:#888;} 
+ .navbar-brand{padding: 0;} 
+ .user-info{
+	line-height: 35px;
+ } 
+ 
+ .change-user .pull-left{font-size: 14px}
+ .change-user .pull-left img{width:32px;height: 32px;border-radius:16px;margin-right:6px;}
+ .change-user .pull-right{margin-top: 6px}
+ .nav-user-photo{width: 32px}
+ .change-user-active{background:#f4f9fc!important;}
+ .change-user-active a{border-bottom:3px solid #4a8dbc!important;color:#4a8dbc!important;}
+.nav-search{width: 120px;top:12px;right:30px;}
+.nav-search .light-grey{margin:0 2px;}
+#J_addWXUser .radio,#J_menuForm .radio,#J_addWXUser .checkbox{padding-left:0;}
+#J_addWXUser .radio label{margin-right:10px;}
+#J_uploadFile-queue{display: none;}
+.uploadify-button-text,#J_uploadAvatar-button{line-height: 1.6!important;cursor:pointer;}
+.wx-avatar-img{width:90px;height:90px;}
+.wx-avatar .ui-pl-10{padding-top:56px;line-height: 34px}
+.error-tips{margin-left:10px;color:red;}
+.ui-wxuser-item{margin:10px 0}
+.ui-wxuser-item .btn-app{width:100%;margin:0;padding:64px 0;}
+.uwi-h4{position: relative;padding-bottom:5px;border-bottom:1px solid #666}
+.uwi-h4 .action-buttons{position: absolute;right:0;top:0;}
+.uwi-img{float:left;width: 100px;height: 100px;margin-right:10px;}
+.uwi-main{position: relative}
+.uwi-main:hover{text-decoration: none;}
+.uwi-info p{line-height:1.5}
+.uwi-more{width:30px;}
+.ico-move{padding-top:12px!important;text-align: center;}
+.ico-move img{cursor: pointer;margin:0 3px;}
+.field-error{background:#fdedd3!important;border:1px solid red!important;}
+.J_mainRow .J_menuName{border-color:#555!important;}
+.J_subRow .ui-gray{color:#b5b5b5;}
+.material-item{margin:15px 0;}
+.mi-pannel{list-style:none;padding:0!important;;float:left;width:23%;min-width:100px;margin:8px 1%;}
+.mip-box{background-color:#fff;border:1px solid #d3d3d3;border-radius:5px;box-shadow: 0 1px 0 rgba(0,0,0,0.1);} 
+.stat-list h4{border-bottom: 1px solid #393939;padding: 10px;width: 95%;}
+.stat-list ul li{line-height: 30px;padding-left: 10px;font-size: 14px;} 
+.play-cover{width: 70px;height: 50px;}
