@@ -720,11 +720,27 @@
 				var id = $(this).attr("data-id"); 
 				var that = this;
 				var $content = $('<button type="button" class="btn btn-primary btn-sm">确定</button>' + '<button type="button" class="btn btn-default btn-sm" style="margin-left:10px">取消</button>'); 
-				$content.eq(0).bind("click", function() {
-					$(that).popover("toggle");
-				});
 				$content.eq(1).bind("click", function() {
 					$(that).popover("toggle");
+				});
+				$content.eq(0).bind("click", function() { 
+					$.post("...", {id:id}, function(data){
+						if (data.status==0) {
+
+						} else {
+							bootbox.dialog({
+								message: "<span class='bigger-110'>添加失败</span>",
+								buttons: 			
+								{
+									"button" :
+									{
+										"label" : "我知道了",
+										"className" : "btn-sm"
+									}
+								}
+							}); 
+						}
+					});
 				}); 
 				return $content;
 			}
