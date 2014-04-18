@@ -323,9 +323,9 @@
 													<a class="orange J_lock" href="#" data-rel="tooltip" data-id="11" data-name="小天" title="锁定">
 														<i class="icon-lock bigger-130"></i>
 													</a>
-													<a class="green" href="#" data-rel="tooltip" title="添加到专题">
+													<a class="green J_addtopic" href="#" data-rel="tooltip" data-id="11" title="添加到专题">
 														<i class="icon-plus bigger-130"></i>
-													</a>
+													</a> 
 												</div>
 											</td>
 										</tr>
@@ -630,12 +630,14 @@
 <script src="assets/js/date-time/daterangepicker.min.js"></script>
 <script src="assets/js/date-time/moment.min.js"></script>
 <script type="text/javascript">
-	$('[data-rel=tooltip]').tooltip();
+	$('[data-rel=tooltip]').tooltip(); 
 	$('input[name=daterange]').daterangepicker().prev().on(ace.click_event, function(){
 		$(this).next().focus();
 	});
 	
 	$(function(){
+
+		//锁定活动
 		var lock=$('.J_lock');
 		lock.on(ace.click_event, function() {
  
@@ -707,6 +709,25 @@
 					}
 				}
 			});
+		});
+
+		//添加到专题
+		$(".J_addtopic").popover({
+		"html": true,
+		"title": "确定要添加吗",
+		"placement": "left",
+		"content": function() {
+				var id = $(this).attr("data-id"); 
+				var that = this;
+				var $content = $('<button type="button" class="btn btn-primary btn-sm">确定</button>' + '<button type="button" class="btn btn-default btn-sm" style="margin-left:10px">取消</button>'); 
+				$content.eq(0).bind("click", function() {
+					$(that).popover("toggle");
+				});
+				$content.eq(1).bind("click", function() {
+					$(that).popover("toggle");
+				}); 
+				return $content;
+			}
 		});
 	})
 </script>
