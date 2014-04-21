@@ -1,0 +1,799 @@
+<!doctype html>
+<html>
+<head>
+	<title>编辑推荐玩法-BETALABS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="max-age=0" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="Description" content="BETALABS" />
+	<meta name="Keywords" content="BETALABS" />
+	<!--[if lte IE 6]>
+	<script>window.location.href='notsupported/';</script>
+	<![endif]-->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+	<![endif]-->
+	<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+	<link rel="stylesheet" href="assets/css/ace.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+	<![endif]-->
+
+	<script src="assets/js/ace-extra.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	<!-- 以上部分不可修改 -->
+	<link rel="stylesheet" href="assets/css/mod.base.css" />
+
+	<link rel="stylesheet" href="assets/css/daterangepicker.css" />
+</head>
+
+<body>
+	<div class="navbar navbar-default" id="navbar">
+		<div class="navbar-container" id="navbar-container">
+			<div class="navbar-header pull-left">
+				<a href="./" class="">
+					<small>
+						<img src="assets/img/logo_small.png" alt="" />
+					</small>
+				</a>
+				<!-- /.brand -->
+			</div>
+			<!-- /.navbar-header -->
+
+			<div class="navbar-header pull-right" role="navigation">
+				<ul class="nav ace-nav">
+					<li >
+						<a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+							<span class="user-info">周晓通</span> <i class="icon-caret-down"></i>
+						</a>
+
+						<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li>
+								<a href="#"> <i class="icon-lock"></i>
+									修改密码
+								</a>
+							</li>
+
+							<li class="divider"></li>
+
+							<li>
+								<a href="#">
+									<i class="icon-off"></i>
+									退出
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- /.ace-nav -->
+			</div>
+			<!-- /.navbar-header -->
+		</div>
+		<!-- /.container -->
+	</div>
+
+	<div class="main-container" id="main-container">
+		<div class="main-container-inner">
+			<a class="menu-toggler" id="menu-toggler" href="#">
+				<span class="menu-text"></span>
+			</a>
+			<div class="sidebar" id="sidebar">
+				<ul class="nav nav-list">
+					<li>
+						<a href="index.html">
+							<i class="icon-dashboard"></i>
+							<span class="menu-text">欢迎页</span>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-book"></i>
+							<span class="menu-text">玩法</span> <b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li >
+								<a href="play.html">
+									<i class="icon-double-angle-right"></i>
+									全部玩法
+								</a>
+							</li>
+							<li>
+								<a href="car.html">
+									<i class="icon-double-angle-right"></i>
+									租车服务
+								</a>
+							</li>
+							<li>
+								<a href="stay.html">
+									<i class="icon-double-angle-right"></i>
+									客栈住宿
+								</a>
+							</li>
+							<li>
+								<a href="lock.html">
+									<i class="icon-double-angle-right"></i>
+									被锁定
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-user"></i>
+							<span class="menu-text">用户</span> <b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="user-all.html">
+									<i class="icon-double-angle-right"></i>
+									全部用户
+								</a>
+							</li>
+							<li>
+								<a href="user-check.html">
+									<i class="icon-double-angle-right"></i>
+									待审核
+								</a>
+							</li>
+							<li>
+								<a href="user-lock.html">
+									<i class="icon-double-angle-right"></i>
+									被锁定
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-exclamation-sign"></i>
+							<span class="menu-text">意见反馈&举报</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="opinion.html">
+									<i class="icon-double-angle-right"></i>
+									意见反馈
+								</a>
+							</li>
+							<li>
+								<a href="report.html">
+									<i class="icon-double-angle-right"></i>
+									举报
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="active">
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-home"></i>
+							<span class="menu-text">首页数据</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="topic.html">
+									<i class="icon-double-angle-right"></i>
+									专题
+								</a>
+							</li>
+							<li  class="active">
+								<a href="play-suggest.html">
+									<i class="icon-double-angle-right"></i>
+									推荐玩法
+								</a>
+							</li>
+							<li>
+								<a href="user-suggest.html">
+									<i class="icon-double-angle-right"></i>
+									推荐地主
+								</a>
+							</li>
+							<li>
+								<a href="ads.html">
+									<i class="icon-double-angle-right"></i>
+									广告
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-hdd"></i>
+							<span class="menu-text">内容</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="play-cate.html">
+									<i class="icon-double-angle-right"></i>
+									玩法分类
+								</a>
+							</li>
+							<li>
+								<a href="user-special.html">
+									<i class="icon-double-angle-right"></i>
+									地主特长
+								</a>
+							</li>
+							<li>
+								<a href="user-cate.html">
+									<i class="icon-double-angle-right"></i>
+									地主分类
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle">
+							<i class="icon-cog"></i>
+							<span class="menu-text">系统设置</span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							<li>
+								<a href="account.html">
+									<i class="icon-double-angle-right"></i>
+									帐号管理
+								</a>
+							</li>
+							<li>
+								<a href="log.html">
+									<i class="icon-double-angle-right"></i>
+									查看日志
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- /.nav-list -->
+
+				<div class="sidebar-collapse" id="sidebar-collapse">
+					<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+				</div>
+			</div>
+
+			<div class="main-content">
+
+				<div class="page-content">
+					<div class="page-header">
+						<h1>
+							首页数据
+							<small>
+								<i class="icon-double-angle-right"></i>
+								推荐玩法
+							</small>
+							<small>
+								<i class="icon-double-angle-right"></i>
+								编辑
+							</small>
+						</h1>
+					</div>
+					<div class="space-6"></div>
+					<div class="widget-box">
+						<div class="widget-header">
+							<h4 class="smaller">
+								<a href="javascript:;"  class="btn btn-success btn-sm tooltip-info J_save">
+									<i class="icon-save"></i>
+									保存
+								</a>
+								<a href="play-suggest.html"  class="btn btn-sm tooltip-info">
+									<i class="icon-remove"></i>
+									取消
+								</a>
+							</h4>
+						</div>
+
+						<div class="widget-body">
+							<div class="widget-main">
+								<div class="row">
+									<div class="col-xs-12">
+										<!-- TIPS.BASE -->
+										<div class="table-responsive">
+
+											<table class="table table-striped table-bordered table-hover dataTable">
+												<thead>
+													<tr>
+														<th>序号</th>
+														<th>玩法名称</th>
+														<th>玩法分类</th>
+														<th>价格</th>
+														<th>更新时间</th>
+														<th>地主名称</th>
+														<th>状态</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody class="J_draggabble">
+													<tr data-id="00001">
+														<td>001</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天001</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr data-id="00002">
+														<td>002</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天002</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr data-id="00003">
+														<td>003</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天003</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+
+													<tr data-id="00004">
+														<td>004</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天004</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr data-id="00005">
+														<td>005</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天005</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr data-id="00006">
+														<td>006</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天006</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr data-id="00007">
+														<td>007</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天007</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr data-id="00008">
+														<td>008</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天008</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<tr data-id="00009">
+														<td>009</td>
+														<td>
+															<a href="#">西安三月赏花好去除</a>
+														</td>
+														<td>玩转景点</td>
+														<td>￥120</td>
+														<td>2014-04-16 22:22:22</td>
+														<td>
+															<a href="#">小天009</a>
+														</td>
+														<td></td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+																<a class="green J_trup" href="javascript:;" data-rel="tooltip" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
+																</a>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<div class="border-dashed ui-pl10">
+												<a href="javascript:;" id="J_add">
+													<i class="icon-plus"></i>
+													添加推荐玩法
+												</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- /.page-content -->
+			</div>
+			<!-- /.main-content -->
+
+		</div>
+		<!-- /.main-container-inner -->
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="icon-double-angle-up icon-only bigger-110"></i>
+		</a>
+	</div>
+	<!-- /.main-container -->
+
+	<!--添加推荐玩法 -->
+	<div id="dialog-message" class="hide">
+		<div class="row">
+			<div class="col-xs-12">
+				<!-- TIPS.BASE -->
+				<div class="table-responsive">
+					<div class="alert alert-info  no-margin">
+						<form class="inline">
+							<label class="inline">
+								<span class="lbl">搜索:</span>
+							</label>
+							<input type="text" class="input-midium J_keyword" name="keyword" />
+							<button type="submit" class="btn btn-info btn-sm J_playsearch">确认</button>
+
+						</form>
+					</div>
+
+					<table class="table table-striped table-bordered table-hover dataTable">
+						<thead>
+							<tr>
+								<th width="6%"></th>
+								<th>ID</th>
+								<th>玩法名称</th>
+								<th>玩法分类</th>
+								<th>价格</th>
+								<th>更新时间</th>
+								<th>地主名称</th>
+								<th>状态</th>
+							</tr>
+						</thead>
+						<tbody class="J_playlist">
+							<tr data-id="00010" data-select="0">
+								<td></td>
+								<td>00010</td>
+								<td>
+									<a href="#">玩法1</a>
+								</td>
+								<td>玩转景点</td>
+								<td>￥120</td>
+								<td>2014-01-02 22:22:22</td>
+								<td>
+									<a  href="#" >天天</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr data-id="00011" data-select="0">
+								<td></td>
+								<td>00011</td>
+								<td>
+									<a href="#">玩法12</a>
+								</td>
+								<td>玩转景点</td>
+								<td>￥120</td>
+								<td>2014-01-02 22:22:22</td>
+								<td>
+									<a  href="#"  >天天</a>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<script src="assets/js/jquery.js"></script>
+	<script>
+	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
+<script src="assets/js/jquery-ui-1.10.3.full.min.js"></script>
+<script src="assets/js/plug.base.js"></script>
+<script src="assets/js/mod.base.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//$('[data-rel=tooltip]').tooltip(); 
+		//拖拽
+		$('.J_draggabble').sortable({
+	        connectWith: '.J_draggabble',
+			items:'>tr',
+			opacity:0.8,
+			revert:true,
+			forceHelperSize:true, 
+			forcePlaceholderSize:true,
+			tolerance:'pointer'
+	    });
+
+	    //上移
+	    $("body").on("click", ".J_trup",function(){
+	    	var i = $(this).parents("tr").index();//当前行的索引
+		     if(i>0){//不是表头，也不是第一行，则可以上移
+		       var cur 		= $(this).parents("tr").html();
+		       var curid 	= $(this).parents("tr").attr("data-id");
+		       var prev		= $(this).parents("tr").prev().html();
+		       var previd 	= $(this).parents("tr").prev().attr("data-id");
+		       $(this).parents("tr").prev().attr("data-id", curid).html(cur);
+		       $(this).parents("tr").attr("data-id", previd).html(prev);
+		     }
+	    });
+
+	    //下移
+	    $("body").on("click", ".J_trdown",function(){
+	    	var l = $(".J_draggabble tr").length;//总行数
+			var i = $(this).parents("tr").index();//当前行的索引
+			 if(i<l-1){//不是最后一行，则可以下移
+			   var cur		= $(this).parents("tr").html();
+			   var curid 	= $(this).parents("tr").attr("data-id");
+		       var next		= $(this).parents("tr").next().html();
+		       var nextid 	= $(this).parents("tr").next().attr("data-id");
+		       $(this).parents("tr").next().attr("data-id", curid).html(cur);
+		       $(this).parents("tr").attr("data-id", nextid).html(next);
+			 }
+	    });
+
+	    //保存  
+	    $(".J_save").on('click', function(){
+	    	var ids = [];
+	    	var tr  = $(".J_draggabble tr");
+	    	if (tr.length<9) {
+	    		bootbox.dialog({
+					message: "<span class='bigger-110'>数据不能少于9条</span>",
+					buttons: 			
+					{
+						"button" :
+						{
+							"label" : "我知道了",
+							"className" : "btn-sm"
+						}
+					}
+				}); 
+	    		return false;
+	    	}
+	    	tr.each(function(){
+	    		ids.push($(this).attr("data-id"));
+	    	});
+	    	ids = ids.join(",");
+	    	//按序传递调整后的玩法id   形如002,001,005
+	    	$.post("...", {ids:ids}, function(data){
+				if (data.status==0) {
+
+				} else {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>保存失败</span>",
+						buttons: 			
+						{
+							"button" :
+							{
+								"label" : "我知道了",
+								"className" : "btn-sm"
+							}
+						}
+					}); 
+				}
+			});
+	    });
+
+	    //添加推荐玩法
+	    $( "#J_add" ).on(ace.click_event, function(e) {
+			e.preventDefault();
+			var playHtml = $("#dialog-message").html();
+			bootbox.dialog({
+				title : '添加推荐玩法',
+				message: playHtml,
+				buttons: 			
+				{
+					
+					"danger" :
+					{
+						"label" : "完成",
+						"className" : "btn-sm btn-danger",
+						"callback": function() { 
+							var selectList = $(".modal-dialog .J_playlist tr[data-select=1]");
+							if (selectList.length>0) {
+								var selectDom = [];
+								selectList.each(function(){
+									var curDom = $(this);
+									var data_id = curDom.attr('data-id');
+									var func = '<td><div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">'+
+										'<a class="green J_trup" href="javascript:;" data-rel="tooltip"  title="上移">'+
+										'<i class="icon-arrow-up bigger-130"></i></a>'+
+										'<a class="green J_trdown" href="javascript:;" data-rel="tooltip" title="下移">'+
+										'<i class="icon-arrow-down bigger-130"></i>'+
+										'</a></div></td>';
+									curDom.children("td").eq(0).remove();
+									curDom.append(func);
+									selectDom.push("<tr data-id='"+data_id+"'>"+curDom.html()+"</tr>"); 
+									$("#dialog-message .J_playlist tr[data-id="+data_id+"]").remove();
+								});
+								$(".J_draggabble").append(selectDom.join(""));
+							}  
+						}
+					},  
+					"button" :
+					{
+						"label" : "取消",
+						"className" : "btn-sm"
+					}
+				}
+			});
+		});
+
+		//添加列表点击选中
+		$("body").on("click", ".J_playlist tr",function(e){
+			e.preventDefault(); 
+			var data_select = $(this).attr("data-select");
+			if (data_select==1) {
+				$(this).attr("data-select", 0);
+				$(this).children("td").eq(0).html("");
+			} else {
+				$(this).attr("data-select", 1);
+				$(this).children("td").eq(0).html("<i class='icon-ok green'></i>");
+			}
+		});
+
+		//列表搜索
+		$("body").on("click", ".J_playsearch", function(){ 
+			var keyword = $(this).prev(".J_keyword").val();
+			//返回HTMLDEMO
+			/*var demo = '<tr data-id="00012">'+
+							'<td></td>'+
+							'<td>00012</td>'+
+							'<td><a href="#">玩法12</a></td>'+
+							'<td>玩转景点</td>'+
+							'<td>￥120</td>'+
+							'<td>2014-01-02 22:22:22</td>'+
+							'<td><a  href="#" >天天</a></td>'+
+							'<td></td>'+
+						'</tr>'; */ 
+			$.post("...",{keyword:keyword}, function(data){
+				//请求成功 将返回的html插入
+				if (data.status==0) {
+					$(".modal-dialog .J_playlist").html(data.data);
+				}
+			})
+			return false;
+		});
+
+	});
+</script>
+</body>
+</html>
