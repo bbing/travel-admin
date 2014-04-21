@@ -700,6 +700,7 @@
 					$(that).popover("toggle");
 				});
 				$content.eq(0).bind("click", function() { 
+					$(that).popover("toggle");
 					$.post("...", {id:id}, function(data){
 						if (data.status==0) {
 

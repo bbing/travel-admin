@@ -59,4 +59,11 @@
 .J_topic{width: 98%;margin: 5px auto;}
 .J_topic li{width: 300px;height: 150px;border: 1px solid #ccc;margin-bottom: 15px;margin-right: 10px;}
 .J_topic li p{line-height: 150px;}
-.border-dashed{border: 1px dashed #ccc;line-height: 30px;height: 30px;}
+.border-dashed{border: 1px dashed #ccc;line-height: 40px;height: 40px;}
+#J_addads input{width: 500px!important;}
+#J_addads #ads_des{width: 500px!important;height: 100px!important;}
+#J_addads #ads_upload{width: 500px!important;height: 160px!important;border: 1px solid #ccc;}
+#J_addads #ads_upload #ads_content{width: 460px;height: 120px;border:1px dashed #ccc;margin:20px;cursor: pointer;}
+#J_addads #ads_upload #ads_content p{line-height: 120px;}
+.table_content>tr{height: 36px!important;}
+.table_content>tr>td{line-height: 36px!important;}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>专题-BETALABS</title>
+	<title>广告-BETALABS</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Cache-Control" content="max-age=0" />
@@ -183,7 +183,7 @@
 							<b class="arrow icon-angle-down"></b>
 						</a>
 						<ul class="submenu">
-							<li class="active">
+							<li>
 								<a href="topic.html">
 									<i class="icon-double-angle-right"></i>
 									专题
@@ -201,7 +201,7 @@
 									推荐地主
 								</a>
 							</li>
-							<li>
+							<li class="active">
 								<a href="ads.html">
 									<i class="icon-double-angle-right"></i>
 									广告
@@ -273,49 +273,17 @@
 							首页数据
 							<small>
 								<i class="icon-double-angle-right"></i>
-								推荐玩法
+								广告
 							</small>
 						</h1>
-					</div>
-					<div class="widget-box">
-						<div class="widget-header">
-							<h4 class="smaller">
-								<a href="topic-edit.html"  class="btn btn-info btn-sm tooltip-info">
-									<i class="icon-edit"></i>
-									编辑
-								</a>
-							</h4>
-						</div>
-
-						<div class="widget-body">
-							<div class="widget-main">
-								<ul class="J_topic list-inline">
-									<li>
-										<p class="text-center">专题一</p>
-									</li>
-									<li>
-										<p class="text-center">专题二</p>
-									</li>
-									<li>
-										<p class="text-center">专题三</p>
-									</li>
-									<li>
-										<p class="text-center">专题四</p>
-									</li>
-									<li>
-										<p class="text-center">专题五</p>
-									</li>
-								</ul>
-							</div>
-						</div>
 					</div>
 					<div class="space-6"></div>
 					<div class="widget-box">
 						<div class="widget-header">
 							<h4 class="smaller">
-								<a href="topic-add.html"  class="btn btn-info btn-sm tooltip-info">
+								<a href="ads-add.html"  class="btn btn-info btn-sm tooltip-info">
 									<i class="icon-plus"></i>
-									新建专题
+									新建广告
 								</a>
 							</h4>
 						</div>
@@ -333,68 +301,85 @@
 														<th>序号</th>
 														<th>专题图片</th>
 														<th>名称</th>
-														<th>描述</th>
-														<th>包含玩法数</th>
+														<th>链接</th>
 														<th>操作</th>
 													</tr>
 												</thead>
-												<tbody >
-													<tr>
-														<td>00001</td>
+												<tbody id="J_adslist">
+													<tr data-id="001">
+														<td>001</td>
 														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
+															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail" />
 														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
+														<td>广告名称</td>
+														<td>
+															<a href="http://www.betalabs.com" target="_blank">http://www.betalabs.com</a>
+														</td>
 														<td>
 															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
+																<a class="green" href="#" data-rel="tooltip"  title="编辑">
 																	<i class="icon-pencil bigger-130"></i>
 																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
+																<a class="orange J_del" href="javascript:;" data-rel="tooltip" data-id="001" title="删除">
 																	<i class="icon-trash bigger-130"></i>
+																</a>
+																<a class="dark J_trup" href="javascript:;"  title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="dark J_trdown" href="javascript:;" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
 																</a>
 															</div>
 														</td>
 													</tr>
-													<tr>
-														<td>00002</td>
+													<tr data-id="002">
+														<td>002</td>
 														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
+															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail" />
 														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
+														<td>广告名称</td>
+														<td>
+															<a href="http://www.betalabs.com" target="_blank">http://www.betalabs.com</a>
+														</td>
 														<td>
 															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
+																<a class="green" href="#" data-rel="tooltip"  title="编辑">
 																	<i class="icon-pencil bigger-130"></i>
 																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
+																<a class="orange J_del" href="javascript:;" data-rel="tooltip" data-id="002" title="删除">
 																	<i class="icon-trash bigger-130"></i>
+																</a>
+																<a class="dark J_trup" href="javascript:;"  title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="dark J_trdown" href="javascript:;" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
 																</a>
 															</div>
 														</td>
 													</tr>
-													<tr>
-														<td>00003</td>
+													<tr data-id="003">
+														<td>003</td>
 														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
+															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail" />
 														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
+														<td>广告名称</td>
+														<td>
+															<a href="http://www.betalabs.com" target="_blank">http://www.betalabs.com</a>
+														</td>
 														<td>
 															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
+																<a class="green" href="#" data-rel="tooltip"  title="编辑">
 																	<i class="icon-pencil bigger-130"></i>
 																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
+																<a class="orange J_del" href="javascript:;" data-rel="tooltip" data-id="003" title="删除">
 																	<i class="icon-trash bigger-130"></i>
+																</a>
+																<a class="dark J_trup" href="javascript:;" title="上移">
+																	<i class="icon-arrow-up bigger-130"></i>
+																</a>
+																<a class="dark J_trdown" href="javascript:;" title="下移">
+																	<i class="icon-arrow-down bigger-130"></i>
 																</a>
 															</div>
 														</td>
@@ -432,15 +417,15 @@
 	<script>
 	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
 <script src="assets/js/plug.base.js"></script>
-<script src="assets/js/mod.base.js"></script> 
+<script src="assets/js/mod.base.js"></script>
 <script type="text/javascript">
 	$('[data-rel=tooltip]').tooltip(); 
 	$(function(){
 		//删除
-		$(".J_delete").popover({
-			"html": true, 
-			"placement": "left",
-			"content": function() {
+		$(".J_del").popover({
+		"html": true, 
+		"placement": "left",
+		"content": function() {
 				var id = $(this).attr("data-id"); 
 				var that = this;
 				var $content = $('<button type="button" class="btn btn-primary btn-sm">确定</button>' + '<button type="button" class="btn btn-default btn-sm" style="margin-left:10px">取消</button>'); 
@@ -454,7 +439,7 @@
 
 						} else {
 							bootbox.dialog({
-								message: "<span class='bigger-110'>删除失败</span>",
+								message: "<span class='bigger-110'>添加失败</span>",
 								buttons: 			
 								{
 									"button" :
@@ -470,7 +455,69 @@
 				return $content;
 			}
 		});
-	})
+		//上移
+	    $("body").on("click", ".J_trup",function(){
+	    	var i = $(this).parents("tr").index();//当前行的索引 
+	    	 var id = $(this).parents("tr").attr("data-id"); 
+		     if(i>0){//不是表头，也不是第一行，则可以上移
+		       var cur 		= $(this).parents("tr").html();
+		       var curid 	= $(this).parents("tr").attr("data-id");
+		       var prev		= $(this).parents("tr").prev().html();
+		       var previd 	= $(this).parents("tr").prev().attr("data-id");
+		       $(this).parents("tr").prev().attr("data-id", curid).html(cur);
+		       $(this).parents("tr").attr("data-id", previd).html(prev); 
+		       $.post("...", {id:id,sort:'up'}, function(data){
+					if (data.status==0) {
+
+					} else {
+						bootbox.dialog({
+							message: "<span class='bigger-110'>排序失败</span>",
+							buttons: 			
+							{
+								"button" :
+								{
+									"label" : "我知道了",
+									"className" : "btn-sm"
+								}
+							}
+						}); 
+					}
+				});
+		     }
+	    });
+
+	    //下移
+	    $("body").on("click", ".J_trdown",function(){
+	    	var l = $("#J_adslist tr").length;//总行数 
+			var i = $(this).parents("tr").index();//当前行的索引
+			var id = $(this).parents("tr").attr("data-id");  
+			 if(i<l-1){//不是最后一行，则可以下移
+			   	var cur		= $(this).parents("tr").html();
+			   	var curid 	= $(this).parents("tr").attr("data-id");
+		       	var next		= $(this).parents("tr").next().html();
+		       	var nextid 	= $(this).parents("tr").next().attr("data-id");
+		       	$(this).parents("tr").next().attr("data-id", curid).html(cur);
+		       	$(this).parents("tr").attr("data-id", nextid).html(next); 
+		       	$.post("...", {id:id, sort:'down'}, function(data){
+					if (data.status==0) {
+
+					} else {
+						bootbox.dialog({
+							message: "<span class='bigger-110'>排序失败</span>",
+							buttons: 			
+							{
+								"button" :
+								{
+									"label" : "我知道了",
+									"className" : "btn-sm"
+								}
+							}
+						}); 
+					}
+				});
+			 }
+	    });
+	});
 </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>专题-BETALABS</title>
+	<title>地主特长-BETALABS</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Cache-Control" content="max-age=0" />
@@ -176,14 +176,14 @@
 							</li>
 						</ul>
 					</li>
-					<li class="active">
+					<li>
 						<a href="javascript:;" class="dropdown-toggle">
 							<i class="icon-home"></i>
 							<span class="menu-text">首页数据</span>
 							<b class="arrow icon-angle-down"></b>
 						</a>
 						<ul class="submenu">
-							<li class="active">
+							<li>
 								<a href="topic.html">
 									<i class="icon-double-angle-right"></i>
 									专题
@@ -209,7 +209,7 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="active">
 						<a href="javascript:;" class="dropdown-toggle">
 							<i class="icon-hdd"></i>
 							<span class="menu-text">内容</span>
@@ -222,7 +222,7 @@
 									玩法分类
 								</a>
 							</li>
-							<li>
+							<li class="active">
 								<a href="user-special.html">
 									<i class="icon-double-angle-right"></i>
 									地主特长
@@ -270,53 +270,34 @@
 				<div class="page-content">
 					<div class="page-header">
 						<h1>
-							首页数据
+							内容
 							<small>
 								<i class="icon-double-angle-right"></i>
-								推荐玩法
+								地主特长
 							</small>
 						</h1>
-					</div>
-					<div class="widget-box">
-						<div class="widget-header">
-							<h4 class="smaller">
-								<a href="topic-edit.html"  class="btn btn-info btn-sm tooltip-info">
-									<i class="icon-edit"></i>
-									编辑
-								</a>
-							</h4>
-						</div>
-
-						<div class="widget-body">
-							<div class="widget-main">
-								<ul class="J_topic list-inline">
-									<li>
-										<p class="text-center">专题一</p>
-									</li>
-									<li>
-										<p class="text-center">专题二</p>
-									</li>
-									<li>
-										<p class="text-center">专题三</p>
-									</li>
-									<li>
-										<p class="text-center">专题四</p>
-									</li>
-									<li>
-										<p class="text-center">专题五</p>
-									</li>
-								</ul>
-							</div>
-						</div>
 					</div>
 					<div class="space-6"></div>
 					<div class="widget-box">
 						<div class="widget-header">
 							<h4 class="smaller">
-								<a href="topic-add.html"  class="btn btn-info btn-sm tooltip-info">
-									<i class="icon-plus"></i>
-									新建专题
-								</a>
+								<div id="J_adddialog">
+									<a href="javascript:;" id="J_addbtn"  class="btn btn-info btn-sm ">
+										<i class="icon-plus"></i>
+										添加
+									</a>
+								</div>
+								<div  id="J_editdialog" class="ui-hide">
+									<input type="text" id="content" placeholder="输入地主特长"  />
+									<a href="javascript:;" id="J_savebtn" class="btn btn-success btn-sm  ui-ml10">
+										<i class="icon-save"></i>
+										保存
+									</a>
+									<a href="javascript:;" id="J_cancelbtn" class="btn btn-sm  ui-ml10">
+										<i class="icon-remove"></i>
+										取消
+									</a>
+								</div>
 							</h4>
 						</div>
 
@@ -327,85 +308,58 @@
 										<!-- TIPS.BASE -->
 										<div class="table-responsive">
 
-											<table class="table table-striped table-bordered table-hover dataTable">
+											<table class="table table-striped table-bordered table-hover dataTable"> 
+												<colgroup>
+										          <col class="col-xs-1">
+										          <col class="col-xs-4">
+										          <col class="col-xs-7">
+										        </colgroup>
 												<thead>
 													<tr>
 														<th>序号</th>
-														<th>专题图片</th>
-														<th>名称</th>
-														<th>描述</th>
-														<th>包含玩法数</th>
+														<th>内容</th>
 														<th>操作</th>
 													</tr>
 												</thead>
-												<tbody >
-													<tr>
-														<td>00001</td>
+												<tbody class="table_content">
+													<tr data-id="001">
+														<td>001</td>
 														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
+															<span class="text_content">资深吃货</span>
+															<input type="text" value="资深吃货" class="field_content ui-hide" />
 														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
 														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
+															<a class="green J_edit_content" href="javascript:;"  title="编辑">
+																<i class="icon-pencil bigger-130"></i>
+															</a> 
 														</td>
 													</tr>
-													<tr>
-														<td>00002</td>
+													<tr data-id="002">
+														<td>002</td>
 														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
+															<span class="text_content">有证驾驶</span>
+															<input type="text" value="有证驾驶" class="field_content ui-hide" />
 														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
 														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
+															<a class="green J_edit_content" href="javascript:;" title="编辑">
+																<i class="icon-pencil bigger-130"></i>
+															</a> 
 														</td>
 													</tr>
-													<tr>
-														<td>00003</td>
+													<tr data-id="003">
+														<td>003</td>
 														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
+															<span class="text_content">精通摄影</span>
+															<input type="text" value="精通摄影" class="field_content ui-hide" />
 														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
 														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
+															<a class="green J_edit_content" href="javascript:;" title="编辑">
+																<i class="icon-pencil bigger-130"></i>
+															</a> 
 														</td>
 													</tr>
 												</tbody>
 											</table>
-
-											<div class="modal-footer no-margin-top">
-												<div class="dataTables_info pull-left">总数 10/1000个</div>
-
-											</div>
 										</div>
 
 									</div>
@@ -432,43 +386,95 @@
 	<script>
 	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
 <script src="assets/js/plug.base.js"></script>
-<script src="assets/js/mod.base.js"></script> 
-<script type="text/javascript">
-	$('[data-rel=tooltip]').tooltip(); 
+<script src="assets/js/mod.base.js"></script>
+<script type="text/javascript"> 
 	$(function(){
-		//删除
-		$(".J_delete").popover({
-			"html": true, 
-			"placement": "left",
-			"content": function() {
-				var id = $(this).attr("data-id"); 
-				var that = this;
-				var $content = $('<button type="button" class="btn btn-primary btn-sm">确定</button>' + '<button type="button" class="btn btn-default btn-sm" style="margin-left:10px">取消</button>'); 
-				$content.eq(1).bind("click", function() {
-					$(that).popover("toggle");
-				});
-				$content.eq(0).bind("click", function() { 
-					$(that).popover("toggle");
-					$.post("...", {id:id}, function(data){
-						if (data.status==0) {
+		//添加事件
+		$("#J_addbtn").on("click", function(){
+			$("#J_adddialog").hide();
+			$("#J_editdialog").show();
+		});
 
-						} else {
-							bootbox.dialog({
-								message: "<span class='bigger-110'>删除失败</span>",
-								buttons: 			
-								{
-									"button" :
-									{
-										"label" : "我知道了",
-										"className" : "btn-sm"
-									}
-								}
-							}); 
-						}
-					});
-				}); 
-				return $content;
+		//取消事件
+		$("#J_cancelbtn").on("click", function(){
+			$("#J_editdialog").hide();
+			$("#J_adddialog").show();
+		});
+
+		//保存事件
+		$("#J_savebtn").on("click", function(){
+			var content = $("#content").val();
+			if (!content) {
+				$("#content").focus();
+				return false;
 			}
+			//保存请求
+			$.post("...", {content:content}, function(data){
+				if (data.status==0) {
+
+				} else {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>添加失败</span>",
+						buttons: 			
+						{
+							"button" :
+							{
+								"label" : "我知道了",
+								"className" : "btn-sm"
+							}
+						}
+					}); 
+				}
+			});
+		});
+
+		//点击编辑
+		$(".table_content").on("click", ".J_edit_content", function(){
+			$(this).parent("td").prev("td").children(".text_content").hide();
+			$(this).parent("td").prev("td").children(".field_content").show();
+			$(this).parent("td").html('<a href="javascript:;" class="btn btn-success btn-sm  ui-ml10 J_save_content">'+
+				'<i class="icon-save"></i>保存</a>'+
+				'<a href="javascript:;" class="btn btn-sm  ui-ml10 J_cancel_content">'+
+				'<i class="icon-remove"></i>取消</a>');
+		});
+
+		//取消编辑
+		$(".table_content").on("click", ".J_cancel_content", function(){ 
+			$(this).parent("td").prev("td").children(".field_content").hide();
+			$(this).parent("td").prev("td").children(".text_content").show();
+			$(this).parent("td").html('<a class="green J_edit_content" href="javascript:;" title="编辑">'+
+				'<i class="icon-pencil bigger-130"></i></a>');
+		});
+
+		//保存编辑
+		$(".table_content").on("click", ".J_save_content", function(){ 
+			var id = $(this).parents("tr").attr("data-id");
+			var content = $(this).parent("td").prev("td").children(".field_content").val();
+			if(!content) {
+				$(this).parent("td").prev("td").children(".field_content").focus();
+				return false;
+			}
+
+			$.post("...", {id:id,content:content}, function(data){
+				if (data.status==0) {
+					//保存成功改变状态
+					$(this).parent("td").prev("td").children(".text_content").text(content).show();
+					$(this).next(".J_cancel_content").trigger("click");
+				} else {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>添加失败</span>",
+						buttons: 			
+						{
+							"button" :
+							{
+								"label" : "我知道了",
+								"className" : "btn-sm"
+							}
+						}
+					}); 
+				}
+			});
+			
 		});
 	})
 </script>
