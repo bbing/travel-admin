@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>专题-BETALABS</title>
+	<title>全部用户-BETALABS</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
 	<meta http-equiv="Cache-Control" content="max-age=0" />
@@ -129,13 +129,13 @@
 						</ul>
 					</li>
 
-					<li>
+					<li class="active">
 						<a href="javascript:;" class="dropdown-toggle">
 							<i class="icon-user"></i>
 							<span class="menu-text">用户</span> <b class="arrow icon-angle-down"></b>
 						</a>
 						<ul class="submenu">
-							<li>
+							<li class="active">
 								<a href="user-all.html">
 									<i class="icon-double-angle-right"></i>
 									全部用户
@@ -176,14 +176,14 @@
 							</li>
 						</ul>
 					</li>
-					<li class="active">
+					<li>
 						<a href="javascript:;" class="dropdown-toggle">
 							<i class="icon-home"></i>
 							<span class="menu-text">首页数据</span>
 							<b class="arrow icon-angle-down"></b>
 						</a>
 						<ul class="submenu">
-							<li class="active">
+							<li>
 								<a href="topic.html">
 									<i class="icon-double-angle-right"></i>
 									专题
@@ -270,147 +270,124 @@
 				<div class="page-content">
 					<div class="page-header">
 						<h1>
-							首页数据
+							全部用户
 							<small>
 								<i class="icon-double-angle-right"></i>
-								专题
+								列表
 							</small>
 						</h1>
 					</div>
-					<div class="widget-box">
-						<div class="widget-header">
-							<h4 class="smaller">
-								<a href="topic-edit.html"  class="btn btn-info btn-sm tooltip-info">
-									<i class="icon-edit"></i>
-									编辑
-								</a>
-							</h4>
-						</div>
 
-						<div class="widget-body">
-							<div class="widget-main">
-								<ul class="J_topic list-inline">
-									<li>
-										<p class="text-center">专题一</p>
-									</li>
-									<li>
-										<p class="text-center">专题二</p>
-									</li>
-									<li>
-										<p class="text-center">专题三</p>
-									</li>
-									<li>
-										<p class="text-center">专题四</p>
-									</li> 
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="space-6"></div>
-					<div class="widget-box">
-						<div class="widget-header">
-							<h4 class="smaller">
-								<a href="topic-add.html"  class="btn btn-info btn-sm tooltip-info">
-									<i class="icon-plus"></i>
-									新建专题
-								</a>
-							</h4>
-						</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<!-- TIPS.BASE -->
+							<div class="table-responsive">
+								<div class="alert alert-info  no-margin">  
+										<a href="javascript:;" id="J_addbtn"  class="btn btn-info btn-sm ">
+										<i class="icon-plus"></i>
+										新建帐号
+									</a>
+								</div>
 
-						<div class="widget-body">
-							<div class="widget-main">
-								<div class="row">
-									<div class="col-xs-12">
-										<!-- TIPS.BASE -->
-										<div class="table-responsive">
+								<table class="table table-striped table-bordered table-hover dataTable">
+									<thead>
+										<tr>
+											<th>序号</th>
+											<th>帐号名称</th>
+											<th>帐号权限</th>
+											<th>操作</th> 
+										</tr>
+									</thead>
+									<tbody >
+										<tr >
+											<td>001</td> 
+											<td>张小七</td>
+											<td>超级管理员</td>   
+											<td>
+												
+											</td>
+										</tr>
+										<tr >
+											<td>002</td> 
+											<td>张小七</td>
+											<td>管理员</td>   
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="green J_edit" href="javascript:;" data-id="002" data-rel="tooltip" title="编辑">
+														<i class="icon-pencil bigger-130"></i>
+													</a>
+													<a class="orange J_del" href="javascript:;" data-id="002" data-rel="tooltip" title="删除">
+														<i class="icon-trash bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr >
+											<td>003</td> 
+											<td>张小七</td>
+											<td>管理员</td>   
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="green J_edit" href="javascript:;" data-id="003" data-rel="tooltip" title="编辑">
+														<i class="icon-pencil bigger-130"></i>
+													</a>
+													<a class="orange J_del" href="javascript:;" data-id="003" data-rel="tooltip" title="删除">
+														<i class="icon-trash bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+										<tr >
+											<td>004</td> 
+											<td>张小七</td>
+											<td>管理员</td>   
+											<td>
+												<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+													<a class="green J_edit" href="javascript:;" data-id="004" data-rel="tooltip" title="编辑">
+														<i class="icon-pencil bigger-130"></i>
+													</a>
+													<a class="orange J_del" href="javascript:;" data-id="004" data-rel="tooltip" title="删除">
+														<i class="icon-trash bigger-130"></i>
+													</a>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 
-											<table class="table table-striped table-bordered table-hover dataTable">
-												<thead>
-													<tr>
-														<th>序号</th>
-														<th>专题图片</th>
-														<th>名称</th>
-														<th>描述</th>
-														<th>包含玩法数</th>
-														<th>操作</th>
-													</tr>
-												</thead>
-												<tbody >
-													<tr>
-														<td>00001</td>
-														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
-														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
-														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>00002</td>
-														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
-														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
-														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>00003</td>
-														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
-														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
-														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+								<div class="modal-footer no-margin-top">
+									<div class="dataTables_info pull-left">用户数 10/1000个</div>
 
-											<div class="modal-footer no-margin-top">
-												<div class="dataTables_info pull-left">总数 10/1000个</div>
+									<ul class="pagination  pull-right no-margin">
+										<li class="prev disabled">
+											<a href="#">
+												<i class="icon-double-angle-left"></i>
+											</a>
+										</li>
 
-											</div>
-										</div>
+										<li class="active">
+											<a href="#">1</a>
+										</li>
 
-									</div>
+										<li>
+											<a href="#">2</a>
+										</li>
+
+										<li>
+											<a href="#">3</a>
+										</li>
+
+										<li class="next">
+											<a href="#">
+												<i class="icon-double-angle-right"></i>
+											</a>
+										</li>
+									</ul>
 								</div>
 							</div>
+
 						</div>
 					</div>
-
 				</div>
 				<!-- /.page-content -->
 			</div>
@@ -429,12 +406,168 @@
 	<script>
 	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
 <script src="assets/js/plug.base.js"></script>
-<script src="assets/js/mod.base.js"></script> 
+<script src="assets/js/mod.base.js"></script>
+<script src="assets/js/date-time/daterangepicker.min.js"></script>
+<script src="assets/js/date-time/moment.min.js"></script>
 <script type="text/javascript">
-	$('[data-rel=tooltip]').tooltip(); 
+	$('[data-rel=tooltip]').tooltip();
+	
 	$(function(){
+		//添加
+		$("#J_addbtn").on(ace.click_event, function(){
+			var addDom = '<div class="row"><div class="col-xs-12"><h2 class="text-center ui-pb20">新建帐号</h2><form class="form-horizontal" role="form">'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">帐号名称</label>'+
+						'<div class="col-sm-9">'+
+						'<input type="text" id="account"  value="" class="col-xs-10 col-sm-5" />'+ 
+						'</div>'+
+					'</div>'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">密码</label>'+
+						'<div class="col-sm-9">'+
+							'<input type="password" id="password"  value="" class="col-xs-10 col-sm-5" />'+ 
+						'</div>'+
+					'</div>'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">权限</label>'+
+						'<div class="col-sm-9">'+
+							'<label><input id="auth" type="radio" value="1" class="ace"><span class="lbl"> 管理员</span></label>'+
+						'</div>'+
+					'</div>'+
+				'</form></div></div>';
+			bootbox.dialog({
+				message: addDom,
+				buttons: 			
+				{
+					
+					"danger" :
+					{
+						"label" : "保存",
+						"className" : "btn-sm btn-danger",
+						"callback": function() {
+							var account = $("#account").val(),password = $("#password").val(),auth = $("#auth").prop("checked");
+							if (!account) {
+								$("#account").focus();
+								return false;
+							}
+							if (!password) {
+								$("#password").focus();
+								return false;
+							}
+
+							/**
+							添加管理员接口
+							status 为0时成功
+							**/
+							$.post('...',{account:account,password:password,auth:auth}, function(data){
+								if (data.status==0) {
+
+								} else {
+									bootbox.dialog({
+										message: "<span class='bigger-110'>添加失败</span>",
+										buttons: 			
+										{
+											"button" :
+											{
+												"label" : "我知道了",
+												"className" : "btn-sm"
+											}
+										}
+									}); 
+								}
+							});
+						}
+					},  
+					"button" :
+					{
+						"label" : "取消",
+						"className" : "btn-sm"
+					}
+				}
+			});
+		})
+		//编辑
+		$(".J_edit").on(ace.click_event, function(){
+			var account = $(this).parents("tr").children("td").eq("1").text();
+			var id 		= $(this).attr("data-id");
+			var editDom = '<div class="row"><div class="col-xs-12"><h2 class="text-center ui-pb20">编辑帐号</h2><form class="form-horizontal" role="form">'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">帐号名称</label>'+
+						'<div class="col-sm-9">'+
+						'<input type="text" id="account"  value="'+account+'" class="col-xs-10 col-sm-5" />'+ 
+						'</div>'+
+					'</div>'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">密码</label>'+
+						'<div class="col-sm-9">'+
+							'<input type="password" id="password"  value="" class="col-xs-10 col-sm-5" />'+ 
+						'</div>'+
+					'</div>'+
+					'<div class="form-group">'+
+						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">权限</label>'+
+						'<div class="col-sm-9">'+
+							'<label><input id="auth" type="radio" value="1" class="ace"><span class="lbl"> 管理员</span></label>'+
+						'</div>'+
+					'</div>'+
+				'</form></div></div>';
+			bootbox.dialog({
+				message: editDom,
+				buttons: 			
+				{
+					
+					"danger" :
+					{
+						"label" : "保存",
+						"className" : "btn-sm btn-danger",
+						"callback": function() {
+							var account = $("#account").val(),password = $("#password").val(),auth = $("#auth").prop("checked");
+							if (!account) {
+								$("#account").focus();
+								return false;
+							}
+							if (!password) {
+								$("#password").focus();
+								return false;
+							}
+
+							/**
+							修改管理员接口
+							status 为0时成功
+							**/
+							$.post('...',{id:id,account:account,password:password,auth:auth}, function(data){
+								if (data.status==0) {
+
+								} else {
+									bootbox.dialog({
+										message: "<span class='bigger-110'>修改失败</span>",
+										buttons: 			
+										{
+											"button" :
+											{
+												"label" : "我知道了",
+												"className" : "btn-sm"
+											}
+										}
+									}); 
+								}
+							});
+						}
+					},  
+					"button" :
+					{
+						"label" : "取消",
+						"className" : "btn-sm"
+					}
+				}
+			});
+		})
+
+
+		
+
 		//删除
-		$(".J_delete").popover({
+		$(".J_del").popover({
+			"title" : '111111',
 			"html": true, 
 			"placement": "left",
 			"content": function() {

@@ -280,9 +280,13 @@
 					<div class="widget-box">
 						<div class="widget-header">
 							<h4 class="smaller">
-								<a href="topic-edit.html"  class="btn btn-info btn-sm tooltip-info">
-									<i class="icon-edit"></i>
-									编辑
+								<a href="javascript:;"  class="btn btn-success btn-sm tooltip-info J_save">
+									<i class="icon-save"></i>
+									保存
+								</a>
+								<a href="topic.html"  class="ui-ml10 btn btn-sm tooltip-info">
+									<i class="icon-remove"></i>
+									取消
 								</a>
 							</h4>
 						</div>
@@ -290,123 +294,19 @@
 						<div class="widget-body">
 							<div class="widget-main">
 								<ul class="J_topic list-inline">
-									<li>
-										<p class="text-center">专题一</p>
+									<li class="J_pick">
+										<p class="text-center">点击添加</p>
 									</li>
-									<li>
-										<p class="text-center">专题二</p>
+									<li class="J_pick">
+										<p class="text-center">点击添加</p>
 									</li>
-									<li>
-										<p class="text-center">专题三</p>
+									<li class="J_pick">
+										<p class="text-center">点击添加</p>
 									</li>
-									<li>
-										<p class="text-center">专题四</p>
-									</li> 
+									<li class="J_pick">
+										<p class="text-center">点击添加</p>
+									</li>
 								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="space-6"></div>
-					<div class="widget-box">
-						<div class="widget-header">
-							<h4 class="smaller">
-								<a href="topic-add.html"  class="btn btn-info btn-sm tooltip-info">
-									<i class="icon-plus"></i>
-									新建专题
-								</a>
-							</h4>
-						</div>
-
-						<div class="widget-body">
-							<div class="widget-main">
-								<div class="row">
-									<div class="col-xs-12">
-										<!-- TIPS.BASE -->
-										<div class="table-responsive">
-
-											<table class="table table-striped table-bordered table-hover dataTable">
-												<thead>
-													<tr>
-														<th>序号</th>
-														<th>专题图片</th>
-														<th>名称</th>
-														<th>描述</th>
-														<th>包含玩法数</th>
-														<th>操作</th>
-													</tr>
-												</thead>
-												<tbody >
-													<tr>
-														<td>00001</td>
-														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
-														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
-														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>00002</td>
-														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
-														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
-														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>00003</td>
-														<td>
-															<img src="assets/img/play-cover.jpg" class="play-cover img-thumbnail"></td>
-														<td>
-															<a  href="#"  >专题名称</a>
-														</td>
-														<td>描述描述描述描述描述描述描述描述描述描述描述</td>
-														<td>12</td>
-														<td>
-															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="green J_edit" href="javascript:;" data-id="113" data-rel="tooltip" title="编辑">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-																<a class="orange J_delete" href="javascript:;" data-id="113" data-rel="tooltip" title="删除">
-																	<i class="icon-trash bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-
-											<div class="modal-footer no-margin-top">
-												<div class="dataTables_info pull-left">总数 10/1000个</div>
-
-											</div>
-										</div>
-
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -424,49 +324,168 @@
 		</a>
 	</div>
 	<!-- /.main-container -->
+	<div class="modal fade" id="picktopic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title text-center" id="myModalLabel">添加到专题</h4>
+				</div>
+				<div class="modal-body">
+					<div class="table-responsive">
+
+						<table class="table table-striped table-bordered table-hover dataTable">
+							<thead>
+								<tr>
+									<th width="6%"></th>
+									<th>序号</th>
+									<th>专题图片</th>
+									<th>名称</th> 
+								</tr>
+							</thead>
+							<tbody class="J_topiclist">
+								<tr data-id="01" data-select="0">
+									<td></td>
+									<td>01</td>
+									<td>
+										<img src="assets/img/playpic1.jpg" class="play-cover img-thumbnail"></td>
+									<td>
+										专题名称
+									</td>
+								</tr>
+								<tr data-id="02" data-select="0">
+									<td></td>
+									<td>02</td>
+									<td>
+										<img src="assets/img/playpic2.jpg" class="play-cover img-thumbnail"></td>
+									<td>
+										专题名称
+									</td>
+								</tr>
+								<tr data-id="03" data-select="0">
+									<td></td>
+									<td>02</td>
+									<td>
+										<img src="assets/img/playpic3.jpg" class="play-cover img-thumbnail"></td>
+									<td>
+										专题名称
+									</td>
+								</tr>
+								<tr data-id="04" data-select="0">
+									<td></td>
+									<td>02</td>
+									<td>
+										<img src="assets/img/playpic4.jpg" class="play-cover img-thumbnail"></td>
+									<td>
+										专题名称
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="J_addbtn">确定</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="assets/js/jquery.js"></script>
 	<script>
 	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
 <script src="assets/js/plug.base.js"></script>
-<script src="assets/js/mod.base.js"></script> 
-<script type="text/javascript">
-	$('[data-rel=tooltip]').tooltip(); 
+<script src="assets/js/mod.base.js"></script>
+<script type="text/javascript"> 
 	$(function(){
-		//删除
-		$(".J_delete").popover({
-			"html": true, 
-			"placement": "left",
-			"content": function() {
-				var id = $(this).attr("data-id"); 
-				var that = this;
-				var $content = $('<button type="button" class="btn btn-primary btn-sm">确定</button>' + '<button type="button" class="btn btn-default btn-sm" style="margin-left:10px">取消</button>'); 
-				$content.eq(1).bind("click", function() {
-					$(that).popover("toggle");
-				});
-				$content.eq(0).bind("click", function() { 
-					$(that).popover("toggle");
-					$.post("...", {id:id}, function(data){
-						if (data.status==0) {
+		 $(".J_topic").on("click", ".J_pick",function(){
+		 	$(this).addClass("selected");
+		 	$('#picktopic').modal('show');
+		 });
 
-						} else {
-							bootbox.dialog({
-								message: "<span class='bigger-110'>删除失败</span>",
-								buttons: 			
-								{
-									"button" :
-									{
-										"label" : "我知道了",
-										"className" : "btn-sm"
-									}
-								}
-							}); 
-						}
-					});
-				}); 
-				return $content;
+		 //列表点击选中
+		$("body").on("click", ".J_topiclist tr",function(e){
+			e.preventDefault(); 
+			var data_select = $(this).attr("data-select");
+			if (data_select==1) {
+				$(this).attr("data-select", 0);
+				$(this).children("td").eq(0).html("");
+			} else {
+				$(this).attr("data-select", 1);
+				$(this).children("td").eq(0).html("<i class='icon-ok green'></i>");
+				$(this).siblings("tr").each(function(){
+					$(this).attr("data-select", 0);
+					$(this).children("td").eq(0).html("");
+				});
 			}
 		});
+
+		//确定添加
+		$("body").on("click", "#J_addbtn", function(e){
+			e.preventDefault(); 
+			var selectDom = $(".J_topiclist tr[data-select=1]");
+			if (selectDom.length==1) {
+				var data_id = selectDom.attr('data-id');
+				var pic_path = selectDom.children("td").eq(2).find("img").attr("src");
+				$(".J_pick").filter(".selected").attr('data-id', data_id);
+				$(".J_pick").filter(".selected").html('<img src="'+pic_path+'" class="topic_picked img-thumbnail" /><i class="icon-remove-sign  orange picked_remove"></i>');
+				$(".J_pick").filter(".selected").attr("class", "picked");
+			} else {
+				$(".J_pick").filter(".selected").removeClass("selected");
+			}
+			$('#picktopic').modal('hide');
+		});
+
+		//删除
+		$("body").on("click", ".picked_remove", function(e){
+			e.preventDefault(); 
+			var dom = $(this).parent("li");
+			dom.attr("class", "J_pick").html('<p class="text-center">点击添加</p>');
+		});
+
+		//保存
+		$(".J_save").on("click", function(){
+			var selected = $(".J_topic li[class='picked']");
+			if (selected.length <4) {
+				bootbox.dialog({
+					message: "<span class='bigger-110'>必须全部添加</span>",
+					buttons: 			
+					{
+						"button" :
+						{
+							"label" : "我知道了",
+							"className" : "btn-sm"
+						}
+					}
+				}); 
+				return false;
+			}
+			var ids = [];
+			selected.each(function(){
+				ids.push($(this).attr("data-id"));
+			});
+			//保存数据
+			$.post('...',{ids:ids.join(",")}, function(data){
+				if (data.status==0) {
+
+				} else {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>失败</span>",
+						buttons: 			
+						{
+							"button" :
+							{
+								"label" : "我知道了",
+								"className" : "btn-sm"
+							}
+						}
+					}); 
+				}
+			});
+
+		})
 	})
 </script>
 </body>

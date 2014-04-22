@@ -56,9 +56,17 @@
 .stat-list ul li{line-height: 30px;padding-left: 10px;font-size: 14px;} 
 .play-cover{width: 70px;height: 50px;}
 .ace-thumbnails > li { border: none!important; }
-.J_topic{width: 98%;margin: 5px auto;}
-.J_topic li{width: 300px;height: 150px;border: 1px solid #ccc;margin-bottom: 15px;margin-right: 10px;}
+.myplaylist li{border: 1px solid #ccc!important;margin-right: 10px;}
+.J_topic{width: 98%!important;margin: 5px auto!important;}
+#J_topic_dia #topic_des{width: 500px!important;height: 100px!important;}
+#J_topic_dia #topic_upload{width: 500px!important;height: 160px!important;border: 1px solid #ccc;}
+#J_topic_dia #topic_upload #topic_content{width: 460px;height: 120px;border:1px dashed #ccc;margin:20px;cursor: pointer;}
+#J_topic_dia #topic_upload #topic_content p{line-height: 120px;}
+.J_topic li{width: 300px;height: 150px;border: 1px solid #ccc;margin-bottom: 15px;margin-right: 10px;position: relative;}
+.J_topic li:hover{cursor: pointer;}
 .J_topic li p{line-height: 150px;}
+.J_topic li .topic_picked{width: 280px;height: 130px;margin-top: 10px;}
+.J_topic li .picked_remove{position: absolute;right: 5px;top:5px;}
 .border-dashed{border: 1px dashed #ccc;line-height: 40px;height: 40px;}
 #J_addads input{width: 500px!important;}
 #J_addads #ads_des{width: 500px!important;height: 100px!important;}
