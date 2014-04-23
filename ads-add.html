@@ -286,10 +286,10 @@
 						<div class="col-xs-12" id="J_addads">
 							<form class="form-horizontal" role="form" type="post">
 								<div class="form-group">
-									<label class="col-sm-1 control-label no-padding-right" for="form-field-1">广告标题:</label>
+									<label class="col-sm-1 control-label no-padding-right" for="form-field-1"><span class="red">*</span>广告标题:</label>
 
 									<div class="col-sm-11">
-										<input type="text" placeholder="输入广告名称" class="col-xs-10 col-sm-5" />
+										<input type="text" placeholder="输入广告名称" id="ads_title" class="col-xs-10 col-sm-5" />
 									</div>
 								</div>
 								<div class="space-4"></div>
@@ -302,8 +302,10 @@
 									<div class="col-sm-11">
 										<div id="ads_upload">
 											<div id="ads_content">
-												<p class="text-center ">点击选择文件 图片比例 1014*152</p>
+												<input type="file" id="uploadPic" />
+												<input type="hidden" id="picpath" /> 
 											</div>
+											<img src="" id="pic" class="ui-hide">
 										</div>
 									</div>
 								</div>
@@ -315,7 +317,7 @@
 									</label>
 
 									<div class="col-sm-11">
-										<input type="text"  placeholder="添加广告链接" class="col-xs-10 col-sm-5" required="true" />
+										<input type="text"  placeholder="添加广告链接" id="ads_link" class="col-xs-10 col-sm-5" required="true" />
 									</div>
 								</div>
 								<div class="space-4"></div>
@@ -329,15 +331,15 @@
 								<div class="space-4"></div>
 								<div class="clearfix">
 									<div class="col-md-offset-1 col-md-11">
-										<button class="btn btn-info" type="submit">
+										<button class="btn btn-info J_save" type="submit">
 											<i class="icon-ok bigger-110"></i>
 											提交
 										</button>
 										&nbsp; &nbsp; &nbsp;
-										<button class="btn" type="reset">
+										<a class="btn" href="ads.html">
 											<i class="icon-undo bigger-110"></i>
 											取消
-										</button>
+										</a>
 									</div>
 								</div>
 							</form>
@@ -362,11 +364,75 @@
 	<script>
 	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
 <script src="assets/js/plug.base.js"></script>
+<script src="assets/js/plug.uploadify.js"></script>
 <script src="assets/js/mod.base.js"></script>
 <script type="text/javascript"> 
 	$(function(){
-		$("#ads_content").on("click", function(){
+		uploadUrl = '...';
+		//上传图片
+		$("#uploadPic").uploadify({
+            'buttonClass':'uploadpic',
+            'width':'450',
+            'height':'120',
+            'buttonText':'点击选择文件 图片比例 1014*152',
+            'uploadLimit':1,
+            'fileTypeExts':'*.gif; *.jpg; *.png; *.jpeg;',
+            'fileSizeLimit':'5MB',
+            'swf':'./assets/img/upload-swf.swf',
+            'queueID':'DFUUploadBox',
+            'uploader':uploadUrl, 
+            'formData':{'type':'submit'},
+            'removeTimeout':0,
+            'multi':false,
+            'onFallback':function () {
+                J_loading.html('上传失败，请重试 :(');
+            },
+            'onUploadSuccess':function (file, str, response) {
+                var data = eval('(' + str + ')');
+                if (data.savename) {
+                	//更新图像及ID
+                	$("#pic").attr('src', data.savename).show(); 
+                    $("#picpath").val(data.savename);
+                }
+            }
+        }); 
 
+        //保存 
+		$(".J_save").on("click", function(e){
+			e.preventDefault(); 
+			var ads_title = $("#ads_title").val(),picpath = $("#picpath").val(),ads_link = $("#ads_link").val(),ads_des = $("#ads_des").val();
+			if (!ads_title) {
+				$("#ads_title").focus();
+				return false;
+			} 
+			if (!picpath) { 
+				$("#ads_content").css("border-color","#F59942");
+				return false;
+			} else {
+				$("#ads_content").css("border-color","#B5B5B5");
+			} 
+			if (!ads_link) {
+				$("#ads_link").focus();
+				return false;
+			}
+			$.post("...", {ads_title:ads_title,picpath:picpath,ads_link:ads_link,ads_des:ads_des}, function(data){
+				if (data.status==0) {
+
+				} else {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>保存失败</span>",
+						buttons: 			
+						{
+							"button" :
+							{
+								"label" : "我知道了",
+								"className" : "btn-sm"
+							}
+						}
+					}); 
+				}
+			});
+			return false;
 		});
 	});
 </script>

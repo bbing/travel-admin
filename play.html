@@ -644,6 +644,83 @@
 		</a>
 	</div>
 	<!-- /.main-container -->
+	<!-- 添加到专题dom-->
+	<div class="modal fade" id="picktopic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title text-center" id="myModalLabel">添加到专题</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="col-sm-3 control-label no-padding-right" for="form-field-1">选择专题</label>
+						<div class="col-sm-9">
+							<select name="lock_reason" id="topicid">
+								<option value="1" selected>专题1</option>
+								<option value="2">专题2</option>
+								<option value="3">专题3</option>
+							</select>
+							<input type="hidden" id="playid_topic" />
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="J_addtopic">确定</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 锁定dom-->
+	<div class="modal fade" id="lockdialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title text-center" id="myModalLabel">锁定</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-xs-12"> 
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1">锁定玩家</label>
+									<div class="col-sm-9">
+										<input type="text" id="lock_username" readonly   class="col-xs-10 col-sm-5" />
+										<input type="hidden" id="lock_id"    />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1">锁定原因</label>
+									<div class="col-sm-9">
+										<select name="lock_reason" id="lock_reason">
+											<option value="1" selected>包含不良内容</option>
+											<option value="2">黑名单</option>
+											<option value="3">等等</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1">补充原因</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" id="lock_des" placeholder="补充原因"></textarea>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="J_lock">确定</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="assets/js/jquery.js"></script>
 	<script>
@@ -658,115 +735,67 @@
 		$(this).next().focus();
 	});
 	
-	$(function(){
-
+	$(function(){ 
 		//锁定活动
 		var lock=$('.J_lock');
-		lock.on(ace.click_event, function() {
- 
+		lock.on(ace.click_event, function() { 
 	 		var lock_id       = $(this).attr('data-id');
 	 		var lock_username = $(this).attr('data-name');
-	 		var lockHtml = '<div class="row"><div class="col-xs-12"><h2 class="text-center ui-pb20">锁定</h2><form class="form-horizontal" role="form">'+
-					'<div class="form-group">'+
-						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">锁定玩家</label>'+
-						'<div class="col-sm-9">'+
-						'<input type="text" id="lock_username" readonly value="'+lock_username+'" class="col-xs-10 col-sm-5" />'+
-						'<input type="hidden" id="lock_id" value="'+lock_id+'"  />'+
-						'</div>'+
-					'</div>'+
-					'<div class="form-group">'+
-						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">锁定原因</label>'+
-						'<div class="col-sm-9">'+
-							'<select name="lock_reason" id="lock_reason">'+
-								'<option value="1" selected>包含不良内容</option>'+
-								'<option value="2">黑名单</option>'+
-								'<option value="3">等等</option>'+
-							'</select>'+ 
-						'</div>'+
-					'</div>'+
-					'<div class="form-group">'+
-						'<label class="col-sm-3 control-label no-padding-right" for="form-field-1">补充原因</label>'+
-						'<div class="col-sm-9">'+
-							'<textarea class="form-control" id="lock_des" placeholder="补充原因"></textarea>'+
-						'</div>'+
-					'</div>'+
-				'</form></div></div>';
-	 		bootbox.dialog({
-				message: lockHtml,
-				buttons: 			
-				{
-					
-					"danger" :
-					{
-						"label" : "锁定",
-						"className" : "btn-sm btn-danger",
-						"callback": function() {
-							var lock_id = $("#lock_id").val(),lock_reason = $("#lock_reason").val(),lock_des = $("#lock_des").val();
-							/**
-							锁定接口
-							status 为0时成功
-							**/
-							$.post('...',{lock_id:lock_id,lock_reason:lock_reason,lock_des:lock_des}, function(data){
-								if (data.status==0) {
-
-								} else {
-									bootbox.dialog({
-										message: "<span class='bigger-110'>锁定失败</span>",
-										buttons: 			
-										{
-											"button" :
-											{
-												"label" : "我知道了",
-												"className" : "btn-sm"
-											}
-										}
-									}); 
-								}
-							});
+	 		$("#lock_username").val(lock_username);
+	 		$("#lock_id").val(lock_id);
+	 		$("#lockdialog").modal('show'); 
+		});
+		$("#J_lock").on("click", function(){
+			var lock_id = $("#lock_id").val(),lock_reason = $("#lock_reason").val(),lock_des = $("#lock_des").val();
+			/**
+			锁定接口
+			status 为0时成功
+			**/
+			$.post('...',{lock_id:lock_id,lock_reason:lock_reason,lock_des:lock_des}, function(data){
+				if (data.status==0) {
+					$("#lockdialog").modal('hide');
+				} else {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>锁定失败</span>",
+						buttons: 			
+						{
+							"button" :
+							{
+								"label" : "我知道了",
+								"className" : "btn-sm"
+							}
 						}
-					},  
-					"button" :
-					{
-						"label" : "取消",
-						"className" : "btn-sm"
-					}
+					}); 
 				}
 			});
 		});
+		
 
 		//添加到专题
-		$(".J_addtopic").popover({
-		"html": true, 
-		"placement": "left",
-		"content": function() {
-				var id = $(this).attr("data-id"); 
-				var that = this;
-				var $content = $('<button type="button" class="btn btn-primary btn-sm">确定</button>' + '<button type="button" class="btn btn-default btn-sm" style="margin-left:10px">取消</button>'); 
-				$content.eq(1).bind("click", function() {
-					$(that).popover("toggle");
-				});
-				$content.eq(0).bind("click", function() { 
-					$(that).popover("toggle");
-					$.post("...", {id:id}, function(data){
-						if (data.status==0) {
-
-						} else {
-							bootbox.dialog({
-								message: "<span class='bigger-110'>添加失败</span>",
-								buttons: 			
-								{
-									"button" :
-									{
-										"label" : "我知道了",
-										"className" : "btn-sm"
-									}
-								}
-							}); 
+		$(".J_addtopic").on("click", function(){
+			$("#playid_topic").val($(this).attr("data-id"));
+			$("#picktopic").modal('show');
+		});
+		$("#J_addtopic").on("click", function(){
+			var topicid = $("#topicid").val(),id=$("#playid_topic").val(); 
+			$.post("...", {topicid:topicid,id:id}, function(data){
+				if (data.status==0) {
+					$("#picktopic").modal('hide');
+				} else {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>添加失败</span>",
+						buttons: 			
+						{
+							"button" :
+							{
+								"label" : "我知道了",
+								"className" : "btn-sm"
+							}
 						}
-					});
-				}); 
-				return $content;
-			}
+					}); 
+				}
+			});
+
 		});
 
 		//解锁

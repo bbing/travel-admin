@@ -58,10 +58,14 @@
 .ace-thumbnails > li { border: none!important; }
 .myplaylist li{border: 1px solid #ccc!important;margin-right: 10px;}
 .J_topic{width: 98%!important;margin: 5px auto!important;}
+#J_topic_dia input{width: 500px!important;}
 #J_topic_dia #topic_des{width: 500px!important;height: 100px!important;}
 #J_topic_dia #topic_upload{width: 500px!important;height: 160px!important;border: 1px solid #ccc;}
-#J_topic_dia #topic_upload #topic_content{width: 460px;height: 120px;border:1px dashed #ccc;margin:20px;cursor: pointer;}
+#J_topic_dia #topic_upload #topic_content{width: 460px;height: 120px;border:1px dashed #ccc;margin:20px;z-index: 1;}
 #J_topic_dia #topic_upload #topic_content p{line-height: 120px;}
+#J_topic_dia #topic_upload #pic{width: 456px;height: 118px;position: absolute;top:22px;left: 35px}
+.uploadpic{z-index: 999;text-align: center;}
+#uploadPic{z-index: 999;}
 .J_topic li{width: 300px;height: 150px;border: 1px solid #ccc;margin-bottom: 15px;margin-right: 10px;position: relative;}
 .J_topic li:hover{cursor: pointer;}
 .J_topic li p{line-height: 150px;}
@@ -73,5 +77,6 @@
 #J_addads #ads_upload{width: 500px!important;height: 160px!important;border: 1px solid #ccc;}
 #J_addads #ads_upload #ads_content{width: 460px;height: 120px;border:1px dashed #ccc;margin:20px;cursor: pointer;}
 #J_addads #ads_upload #ads_content p{line-height: 120px;}
+#J_addads #ads_upload  #pic{width: 456px;height: 118px;position: absolute;top:22px;left: 35px}
 .table_content>tr{height: 36px!important;}
 .table_content>tr>td{line-height: 36px!important;}
