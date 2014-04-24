@@ -12,29 +12,21 @@
 	<meta name="Keywords" content="BETALABS" />
 	<!--[if lte IE 6]>
 	<script>window.location.href='notsupported/';</script>
-	<![endif]-->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+	<![endif]--> 
+	<link rel="stylesheet" href="assets/css/plug.base.css" />
 	<!--[if IE 7]>
 	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
 	<![endif]-->
-	<link rel="stylesheet" href="assets/css/ace-fonts.css" />
-	<link rel="stylesheet" href="assets/css/ace.min.css" />
-	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-
+	<link rel="stylesheet" href="assets/css/plug.ace.css" />  
 	<!--[if lte IE 8]>
 	<link rel="stylesheet" href="assets/css/ace-ie.min.css" />
-	<![endif]-->
-
-	<script src="assets/js/ace-extra.min.js"></script>
+	<![endif]-->  
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 以上部分不可修改 -->
-	<link rel="stylesheet" href="assets/css/mod.base.css" />
-
+	<link rel="stylesheet" href="assets/css/mod.base.css" /> 
 	<link rel="stylesheet" href="assets/css/daterangepicker.css" />
 </head>
 
@@ -725,8 +717,7 @@
 	<script src="assets/js/jquery.js"></script>
 	<script>
 	if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.js'>"+"<"+"/script>");</script>
-<script src="assets/js/plug.base.js"></script>
-<script src="assets/js/mod.base.js"></script>
+<script src="assets/js/plug.base.js"></script> 
 <script src="assets/js/date-time/daterangepicker.min.js"></script>
 <script src="assets/js/date-time/moment.min.js"></script>
 <script type="text/javascript">
@@ -736,7 +727,7 @@
 	});
 	
 	$(function(){ 
-		//锁定活动
+		//锁定
 		var lock=$('.J_lock');
 		lock.on(ace.click_event, function() { 
 	 		var lock_id       = $(this).attr('data-id');
